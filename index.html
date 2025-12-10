@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> 👾xoxo PrettyyHackerr👾 </title>
+  <style>
+    :root {
+      --bg-light: #FFF9C4;
+      --accent-light: #FFE0B2;
+      --text-light: #424242;
+      --highlight-light: #FFB74D;
+      --bg-dark: #1e1e1e;
+      --accent-dark: #2c2c2c;
+      --text-dark: #f0f0f0;
+      --highlight-dark: #FFB74D;
+      html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    header, footer {
+      background-color: var(--accent-light);
+      text-align: center;
+      padding: 0.5rem 1rem;
+      border-bottom: 3px solid var(--highlight-light);
+    }
+    body.dark header, body.dark footer {
+      background-color: var(--accent-dark);
+      border-color: var(--highlight-dark);
+    }
+    h1 { margin: 0; font-size: 2rem; }
+    .toggle-container {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .toggle-container button {
+      background: var(--highlight-light);
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    body.dark .toggle-container button {
+      background: var(--highlight-dark);
+      color: #000;
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60vh;
+      flex-direction: column;
+    }
+    .recaptcha-container {
+      margin-top: 2rem;
+    }
+    nav {
+      display: none;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #FF8F00;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      display: none;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    section.active {
+      display: block;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: var(--highlight-light);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    body.dark form button {
+      background-color: var(--highlight-dark);
+      color: #000;
+    }
+  </style>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <div class="toggle-container">
+    <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+  </div>
+
+  <header>
+    <h1>🔐 Jendayee Cave Portfolio</h1>
+  </header>
+  <main>
+  <div class="content" id="gate">
+    <div class="recaptcha-container">
+      <div class="g-recaptcha" data-sitekey="6LcUKycsAAAAAGSEDtbqx2tFVwD7X-h0pOOXWgRf" data-callback="unlockSite"></div>
+    </div>
+  </div>
+
+  <nav id="nav">
+    <a href="#" onclick="showSection('project1')">🔍 Mapstar School Locator</a>
+    <a href="#" onclick="showSection('project2')">🤖 MyChat: Secure Robo Assistant</a>
+    <a href="#" onclick="showSection('project3')">🎓 Scholarship Application Form</a>
+    <a href="#" onclick="showSection('about')">👤 Bio</a>
+    <a href="#" onclick="showSection('contact')">📬 Credentials</a>
+  </nav>
+
+  <section id="project1"></section>
+  <h2>🏫 MAPSTARS School Locator</h2>
+  <p>Children — the greatest asset of all — and where they learn from matters. This project visualizes nearby educational institutions to help families identify safe, accessible schools in their community. It highlights underutilized facilities, neighborhood networks, and proximity-based recommendations. This tool supports thoughtful school selection and promotes awareness of local resources for families with school-age children.</p>
+  
+  <img src="mapski.png" alt="Map showing school locations and utilization status in Chicago neighborhoods">
+
+  <img src="mapski2.png" alt="MAPSTARS terminal output showing nearby schools based on user address">
+
+<a href="mapski.txt" target="_blank" class="view-code-btn">
+    View Code
+
+</section>
+
+
+  <section id="project2">
+  <h2>🤖 MyChat: Secure Robo Assistant</h2>
+  <p>Say hello to MyChat — your new application assistant. Do you wish you had someone to open your frequently used apps for you? Well now you do. Just tell the chatbot what you want to open and sit back and relax. Voice typing and other capabilities available soon. This retro instant messenger has just been PROMOTED to an ELITE EMPLOYEE.</p>
+  
+  <img src="mychat.png" alt="MyChat interface showing chatbot launching apps like calculator and VS Code">
+
+  <img src="mychat2.png" alt="Windows desktop showing MyChat launching multiple applications">
+
+  <a href="mychat.txt" target="_blank" class="view-code-btn">
+    View Code
+</section>
+
+
+<section id="project3">
+  <h2>🎓 Scholarship Application Form</h2>
+  <p>Real scholarships for real people. If you are at least 18 years old and have a GPA of 3.5 or higher, tell us why you should receive it, add your references, and share this form with other students in need! This form is designed to be secure, accessible, and easy to complete — empowering motivated individuals to pursue their academic goals.</p>
+  
+  <img src="schoform" alt="Scholarship application form with personal and academic fields" >
+
+  <img src="schoform2.png" alt="Scholarship form with references, test scores, and submission options">
+
+  <img src="schoform3.png" alt="Submission confirmation message for scholarship application">
+
+  <a href="schoform.txt" target="_blank" class="view-code-btn">
+    View Code
+</section>
+
+  <section id="Bio">
+    <h2>👤 About Me</h2>
+    <p>Hi! My name is Jendayee Cave, an up and coming cybersecurity enthusiast passionate about digital defense and ethical hacking I build tools that help people understand and protect their digital environments. If you're reading this then you need help securing your company. You came to the right place. xoxo </p>
+  </section>
+
+  <section id="Education">
+    <h2>📬 My Credentials</h2>
+    <p> I am majoring in Cybersecurity. I plan to expand intho the healthcare field and integrate cybersecurity in everyday life &health to be more accessible aswell as affordable for real working people. Having a sense of security shouldn't be something that is a luxury, its the bare minimum. I enjoy using Python, Git, Bash &am learning more cyber languages regularly to get to the top in the industry. </p>
+  </section>
+  </main>
+  <footer>
+    <p>© 2025 👾xoxo PrettyyHackerr👾</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+
+    function unlockSite() {
+      document.getElementById("gate").style.display = "none";
+      document.getElementById("nav").style.display = "flex";
+      showSection('about');
+    }
+
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+</body>
+</html>
